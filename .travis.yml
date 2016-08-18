@@ -22,10 +22,11 @@ before_install:
   - nvm install stable
   - node --version
   - pip install -U pip pytest
+  - pip install travis
 
 install:
   - pip install --editable . .[test]
-  - travis retry make build-js
+  - travis_retry make build-js
 
 before_script:
   - export DISPLAY=:99.0

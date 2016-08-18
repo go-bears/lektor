@@ -19,6 +19,7 @@ def test_publication(live_server, browser, simple_http_server):
     browser.find_by_css('#lektor-edit-link').click()
     assert browser.title == 'Lektor Admin'
 
+    assert browser.find_by_css('.form-control')
     browser.find_by_css('.form-control').fill('Melissa is cool')
     browser.find_by_css('.btn-primary').click()
 

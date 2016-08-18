@@ -23,6 +23,7 @@ before_install:
   - node --version
   - pip install -U pip pytest
   - pip install travis
+  - pip install pytest-splinter==1.7.5
 
 install:
   - pip install --editable . .[test]
